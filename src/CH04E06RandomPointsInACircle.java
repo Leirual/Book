@@ -40,11 +40,6 @@ public class CH04E06RandomPointsInACircle {
 		System.out.printf("The angles are: %.2f , %.2f , %.2f %n", final1,final2,final3);
 		double sum = final1+final2+final3;
 		System.out.printf("%.2f", sum);
-		
-		
-		
-		
 
 	}
-
 }

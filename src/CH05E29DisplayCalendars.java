@@ -11,6 +11,13 @@ public class CH05E29DisplayCalendars {
 		
 		System.out.println("Please state what day of the week (from 1 to 7, where monday is 1, and sunday is 7) is the first day of that year");
 		int day = scan.nextInt();
+		//in case of someone giving a higher number
+		if(day>7){
+			day=day%7;
+			if(day==0){
+				day=7;
+			}
+		}
 		
 		String month = "x";
 		String monthYear; //variable containing month + year, like "January 2013"

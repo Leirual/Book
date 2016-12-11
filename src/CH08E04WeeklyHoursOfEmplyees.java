@@ -40,6 +40,7 @@ public class CH08E04WeeklyHoursOfEmplyees {
 			currentTotal = 0;
 		}
 		
+		// establishing values from first row
 		for(int row = 0; row<1; row++){
 			for(int column = 0; column<schedule[row].length; column++){
 				currentTotal += schedule[row][column];
@@ -50,7 +51,7 @@ public class CH08E04WeeklyHoursOfEmplyees {
 		currentTotal = 0;
 		previousTotal = cache;
 		
-		// mix-up
+		// mixing-up the array
 		for(int row = 1; row<schedule.length; row++){
 			
 			for(int column = 0; column<schedule[row].length; column++){
@@ -59,9 +60,6 @@ public class CH08E04WeeklyHoursOfEmplyees {
 			for(int column = 0; column<schedule[row-1].length; column++){
 				previousTotal += schedule[row-1][column];
 			}
-/*			System.out.println("Previous tatal was " + previousTotal);
-			System.out.println("Current total before change is " + currentTotal);*/
-			
 			if(currentTotal > previousTotal){
 				int[] hoursOrder = new int[8];
 				hoursOrder = schedule[row-1];
@@ -70,10 +68,6 @@ public class CH08E04WeeklyHoursOfEmplyees {
 				previousTotal = currentTotal;
 				row = 0;
 			}
-/*			System.out.println("Current total after change is " + currentTotal);
-			System.out.println("Current Max is " + currentTotal);
-			System.out.println();*/
-
 			currentTotal = 0;
 			previousTotal = 0;
 		}

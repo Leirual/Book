@@ -53,7 +53,6 @@ public class CH08E04WeeklyHoursOfEmplyees {
 		
 		// mixing-up the array
 		for(int row = 1; row<schedule.length; row++){
-			
 			for(int column = 0; column<schedule[row].length; column++){
 				currentTotal += schedule[row][column];
 			}

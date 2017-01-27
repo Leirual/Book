@@ -4,13 +4,12 @@ public class Test {
 
 	public static void main(String[] args) {
 
-		Date date = new Date(1234567);
-		m1(date);
-		System.out.println(date.getTime());
-	}
-	
-	public static void m1(Date date){
-		date = null;
+		BMI bmi1 = new BMI("Kim Yang", 18, 145, 70);
+		System.out.println("The BMI for " + bmi1.getName() + " is " + bmi1.getBMI() + " " + bmi1.getStatus());
+		BMI bmi2 = new BMI("Susan King", 215, 70);
+		System.out.println("The BMI for " + bmi2.getName() + " is " + bmi2.getBMI() + " " + bmi2.getStatus());
 		
 	}
 }
+
+

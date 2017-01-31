@@ -14,9 +14,10 @@ public class CH10E09Course {
 		numberOfStudents++;
 		if(numberOfStudents==students.length){
 			String[] temp = new String[students.length + 1];
-			for (int i = 0; i < students.length; i++){
+/*			for (int i = 0; i < students.length; i++){
 				temp[i] = students[i];
-			}
+			}*/
+			System.arraycopy(students, 0, temp, 0, students.length);
 			students = temp;
 		}
 	}
@@ -39,6 +40,7 @@ public class CH10E09Course {
 				for(int j=i; j<students.length-1; j++){
 					students[j] = students[j+1];
 				}
+				break;
 			}
 		}
 		numberOfStudents--;

@@ -13,11 +13,11 @@ public class CH10E04MyPoint {
 	public double x;
 	public double y;
 
-	public double getX() {
+	public double getX() {		// gets the X coordinate
 		return x;
 	}
 
-	public double getY() {
+	public double getY() {		// gets the Y coordinate
 		return y;
 	}
 
@@ -29,17 +29,17 @@ public class CH10E04MyPoint {
 		this.y = y;
 	}
 
-	public CH10E04MyPoint() {
+	public CH10E04MyPoint() {	// no arg constructor
 		x = 0;
 		y = 0;
 	}
 
-	public CH10E04MyPoint(double x, double y) {
+	public CH10E04MyPoint(double x, double y) {	// basic constructor
 		this.x = x;
 		this.y = y;
 	}
 
-	public static double distance(CH10E04MyPoint a, CH10E04MyPoint b) {
+	public static double distance(CH10E04MyPoint a, CH10E04MyPoint b) {	// a static method that determines the distance between 2 points
 		double aOne = a.getX();
 		double aTwo = a.getY();
 		double bOne = b.getX();
@@ -50,7 +50,7 @@ public class CH10E04MyPoint {
 		return dist;
 	}
 
-	public double distance(double x, double y) {
+	public double distance(double x, double y) {	// a standard method the determines distance between an existing point and a new one
 		double aOne = getX();
 		double aTwo = getY();
 

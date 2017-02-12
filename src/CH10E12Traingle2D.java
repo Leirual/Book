@@ -35,6 +35,7 @@ public class CH10E12Traingle2D {
 		}
 	}
 
+	// creating three "point" objects
 	public CH10E04MyPoint p1 = new CH10E04MyPoint(); // objects have to have their constructors ready
 	public CH10E04MyPoint p2 = new CH10E04MyPoint();
 	public CH10E04MyPoint p3 = new CH10E04MyPoint();
@@ -66,13 +67,13 @@ public class CH10E12Traingle2D {
 		p3.setY(p3y);
 	}
 
-	public CH10E12Traingle2D() {
+	public CH10E12Traingle2D() {	// no arg triangle constructor
 		setP1(0, 0);
 		setP2(1, 1);
 		setP3(2, 5);
 	}
 
-	public CH10E12Traingle2D(double p1x, double p1y, double p2x, double p2y, double p3x, double p3y) {
+	public CH10E12Traingle2D(double p1x, double p1y, double p2x, double p2y, double p3x, double p3y) {	// basic triangle constructor
 		this.p1.x = p1x;
 		this.p1.y = p1y;
 		this.p2.x = p2x;
@@ -81,7 +82,7 @@ public class CH10E12Traingle2D {
 		this.p3.y = p3y;
 	}
 
-	public double getArea() {
+	public double getArea() {	// method calculating the triangle's area
 		CH10E04MyPoint p1 = getP1();
 		CH10E04MyPoint p2 = getP2();
 		CH10E04MyPoint p3 = getP3();
@@ -89,7 +90,7 @@ public class CH10E12Traingle2D {
 		return area;
 	}
 
-	public double getPerimeter() {
+	public double getPerimeter() {	// method calculating the triangle's perimeter
 		CH10E04MyPoint p1 = getP1();
 		CH10E04MyPoint p2 = getP2();
 		CH10E04MyPoint p3 = getP3();
@@ -99,7 +100,7 @@ public class CH10E12Traingle2D {
 		return perimeter;
 	}
 	
-	public boolean contains(CH10E04MyPoint p){
+	public boolean contains(CH10E04MyPoint p){	// method calculating if a point is inside the specific triangle
 		double alpha = ((p2.y - p3.y)*(p.x - p3.x) + (p3.x - p2.x)*(p.y - p3.y)) /
 		        ((p2.y - p3.y)*(p1.x - p3.x) + (p3.x - p2.x)*(p1.y - p3.y));
 		double beta = ((p3.y - p1.y)*(p.x - p3.x) + (p1.x - p3.x)*(p.y - p3.y)) /

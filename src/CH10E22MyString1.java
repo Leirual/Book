@@ -1,5 +1,5 @@
 
-public class CH10E22MyString1 {
+public class CH10E22MyString1 {	// creating my own "String" class with its methods
 
 	public static void main(String[] args) {
 
@@ -11,13 +11,11 @@ public class CH10E22MyString1 {
 		System.out.println(word.charAt(2));
 		System.out.println(word.lenght());
 		System.out.println(word.substring(1, 3).toString());
-
-		
 	}
 
 	public char[] chars;
 	
-	public CH10E22MyString1(char[] chars){
+	public CH10E22MyString1(char[] chars){	// basic constructor
 		this.chars = chars;
 		for(int i=0; i<chars.length; i++){
 			this.chars[i] = chars[i];

@@ -2,17 +2,38 @@ import java.util.Date;
 
 public class Test {
 	
-	private String text;
-	public Test(String s){
-		text = s;
+	private double radius;
+	
+	public Test(double radius){
+		this.radius = radius;
 	}
 	
-	public static void main(String[] args){
-		Test test = new Test("ABC");
-		System.out.println(test.text.toLowerCase());
-	
-		
+	public double getRadius(){
+		return radius;
 	}
+	
+	public double getArea(){
+		return radius * radius * Math.PI;
+	}
+
+}
+
+class B extends Test{
+	private double length;
+	
+	public B(double radius, double length){
+		super(radius);
+		this.length = length;
+	}
+	
+	@Override
+	public double getArea(){
+		return getArea() * length;
+	}
+	
+	
+	
+	
 }
 
 

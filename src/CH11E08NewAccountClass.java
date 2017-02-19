@@ -15,7 +15,11 @@ public class CH11E08NewAccountClass {
 		account.withdraw(2);
 		
 		System.out.println("Account holder name: " + account.getName() + " Interest rate is: " + account.getAnnualInterestRate()
-		+ " Balance is: " + account.getBalance() + " The transactions are as follows: " + account.getTransactions().toString() );
+		+ " Balance is: " + account.getBalance() + " The transactions are as follows: ");
+		
+		for(CH11E08Transaction t : account.getTransactions()){
+			System.out.print(t.getDescription());
+		}
 	}
 
 	private int id = 0;
@@ -24,7 +28,6 @@ public class CH11E08NewAccountClass {
 	private Date dateCreated = new Date();
 	private String name;
 	protected ArrayList<CH11E08Transaction> transactions = new ArrayList<>();
-	
 	
 	public CH11E08NewAccountClass(){
 	}
@@ -37,7 +40,6 @@ public class CH11E08NewAccountClass {
 		this.id = id;
 		this.balance = balance;
 	}
-	
 	
 	public ArrayList<CH11E08Transaction> getTransactions() {
 		return transactions;
@@ -85,14 +87,15 @@ public class CH11E08NewAccountClass {
 	
 	public void withdraw(double ammount){
 		balance = balance - ammount;
-		String description = "W, " + ammount + ", " + balance;
+		String description = "";
 		CH11E08Transaction transaction = new CH11E08Transaction('W', ammount, balance, description);
 		transactions.add(transaction);
 	}
 	
 	public void deposit(double ammount){
 		balance = balance + ammount;
-		CH11E08Transaction transaction = new CH11E08Transaction('D', ammount, balance, 'D' + ", " + ammount + ", " + balance + "\n");
+		String description = "";
+		CH11E08Transaction transaction = new CH11E08Transaction('D', ammount, balance, description);
 		transactions.add(transaction);
 	}
 }

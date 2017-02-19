@@ -39,15 +39,10 @@ public class CH11E08Transaction extends CH11E08NewAccountClass{
 		this.description = description;
 	}
 	
-	public String toString(){
-		description = getType() + ", " + getAmmount() + ", " + getBalance() + "\n";
-		return description;	
-	}
-	
 	protected CH11E08Transaction(char type, double ammount, double balance, String description){
 		this.type = type;
 		this.ammount = ammount;
 		this.balance = balance;
-		this.description = toString();
+		this.description = getType() + ", " + getAmmount() + ", " + getBalance() + "\n";
 	}
 }
